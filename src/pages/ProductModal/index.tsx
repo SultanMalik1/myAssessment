@@ -19,62 +19,31 @@ export default function ProductModal() {
     setProductDetails(foundProduct)
   }, [productId, products])
 
-  const innerClasses = cx(styles.inner, {
-    [styles.empty]: false,
-  })
-
   return (
     <div className={styles.wrapper}>
-      <div className={innerClasses}>
-        {/* <Link to="/" className={styles.closeBtn}>
-          <img src={close} alt="close" />
-        </Link> */}
+      <div className={styles.inner}>
+        {/* Visible only on small screens */}
+        <div className={styles.contentHeader}>Hello</div>
 
-        {/* I've used != instead of !== because it != only checks the value and not the type */}
-        {productDetails != null ? (
-          <>
-            <div className={cx(styles.products, styles.section)}>
-              <h2 className={styles.heading}>Shopping Bag</h2>
-              <ul className={styles.productList}></ul>
+        <div className={styles.container}>
+          <div className={styles.imageContainer}>
+            <div className={styles.imagePicker}>Hello</div>
+            <div className={styles.imageWrapper}>Hello</div>
+          </div>
+
+          <div className={styles.content}>
+            {/* Visible only on large screens */}
+            <div className={styles.contentHeader}>Hello</div>
+
+            <div className={styles.contentDescription}>Hello</div>
+
+            <div className={styles.contentFooter}>
+              <div className={styles.sizeContainer}>Hello</div>
+              <div className={styles.quantityContainer}>Hello</div>
+              <div className={styles.buttonContainer}>Hello</div>
             </div>
-            <div className={cx(styles.summary, styles.section)}>
-              <h2 className={styles.heading}>Order Summary</h2>
-              <div>
-                <div className={styles.summaryRow}>
-                  <span className={styles.summaryItem}>Subtotal</span>
-                  <span className={cx(styles.summaryItem, styles.summaryPrice)}>$0</span>
-                </div>
-                <div className={styles.summaryRow}>
-                  <span className={styles.summaryItem}>Taxes</span>
-                  <span className={cx(styles.summaryItem, styles.summaryPrice)}>$0</span>
-                </div>
-                <div className={styles.summaryRow}>
-                  <span className={styles.summaryItem}>Shipping</span>
-                  <span className={cx(styles.summaryItem, styles.summaryPrice)}>Free</span>
-                </div>
-                <div className={styles.summaryRow}>
-                  <span className={styles.summaryItem}>Total</span>
-                  <span
-                    className={cx(styles.summaryItem, styles.summaryPrice, styles.summaryItemBold)}
-                  >
-                    $0
-                  </span>
-                </div>
-              </div>
-              <Button className={styles.checkoutBtn} onClick={() => null}>
-                Checkout
-              </Button>
-            </div>
-          </>
-        ) : (
-          <>
-            {/* <img className={styles.emptyImage} src={empty} alt="empty" /> */}
-            <p className={cx(styles.text, styles.emptyTitle)}>Your bag is empty</p>
-            <p className={cx(styles.text, styles.emptyText)}>
-              Please add some products to your cart
-            </p>
-          </>
-        )}
+          </div>
+        </div>
       </div>
     </div>
   )
