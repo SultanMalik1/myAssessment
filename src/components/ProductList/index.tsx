@@ -1,13 +1,13 @@
-import React from 'react';
-import Product from '../Product';
+import React from 'react'
+import Product from '../Product'
 
-import styles from './ProductList.module.scss';
-import { IProduct, ICart } from '../../hooks/useAppContext';
+import styles from './ProductList.module.scss'
+import { IProduct, ICart } from '../../hooks/useAppContext'
 
 interface Props {
-  addItem: (product: IProduct) => void;
-  cartItems: ICart[];
-  products: IProduct[];
+  addItem: (product: IProduct) => void
+  cartItems: ICart[]
+  products: IProduct[]
 }
 const ProductList: React.FC<Props> = ({ addItem, products, cartItems }) => {
   const renderProduct = (product: IProduct, isFeatured = false) => (
@@ -18,7 +18,7 @@ const ProductList: React.FC<Props> = ({ addItem, products, cartItems }) => {
       key={product.id}
       isFeatured={isFeatured}
     />
-  );
+  )
 
   return (
     <div className={styles.products}>
@@ -27,7 +27,7 @@ const ProductList: React.FC<Props> = ({ addItem, products, cartItems }) => {
         {[...products].slice(1).map((p) => renderProduct(p))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProductList;
+export default ProductList
