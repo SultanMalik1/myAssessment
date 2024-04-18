@@ -1,12 +1,12 @@
-import React from 'react';
-import cx from 'classnames';
+import React from 'react'
+import cx from 'classnames'
 
-import styles from './Quantity.module.scss';
+import styles from './Quantity.module.scss'
 
 interface Props {
-  count: number;
-  onDecrement: () => void;
-  onIncrement: () => void;
+  count: number
+  onDecrement: () => void
+  onIncrement: () => void
 }
 
 const Quantity: React.FC<Props> = ({ onIncrement, onDecrement, count }) => {
@@ -20,7 +20,7 @@ const Quantity: React.FC<Props> = ({ onIncrement, onDecrement, count }) => {
         +
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default Quantity;
+export default Quantity
