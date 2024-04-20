@@ -22,8 +22,6 @@ interface IProductProps extends IProduct {
   count?: number
 }
 
-// TODO: Add css to product modal that shows pointer cursor on hover
-// add properties like expand, shadow on hover
 const Product: React.FC<IProductProps> = ({
   className,
   count = 1,
