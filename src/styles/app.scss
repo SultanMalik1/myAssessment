@@ -17,7 +17,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -36,7 +37,12 @@ button {
   background: transparent;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
 }

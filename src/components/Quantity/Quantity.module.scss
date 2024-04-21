@@ -3,6 +3,12 @@
 
 $buttonWidth: 38px;
 
+.quantityContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .quantity {
   @include typography.price;
   position: relative;
@@ -40,7 +46,8 @@ $buttonWidth: 38px;
   cursor: pointer;
 }
 
-.left, .right {
+.left,
+.right {
   border: none;
 }
 
