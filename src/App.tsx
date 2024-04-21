@@ -16,7 +16,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path={HOME_PAGE_ROUTE} element={<ProductLanding />} />
           <Route path={CART_PAGE_ROUTE} element={<Cart />} />
-          {/*  The path for the product page with a dynamic parameter for the productId */}
+          {/*  The path for the productModal page with a dynamic parameter for the productId */}
           <Route path={`${PRODUCT_PAGE_ROUTE}/:productId`} element={<ProductModal />} />
         </Routes>
       </Router>

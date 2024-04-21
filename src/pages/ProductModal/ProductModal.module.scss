@@ -132,6 +132,13 @@
   gap: 10px;
 }
 
+@media (max-width: 410px) {
+  .contentHeader {
+    font-size: 30px;
+    line-height: 55px;
+  }
+}
+
 /* Inner content header styles */
 .inner > .contentHeader {
   display: none;
@@ -186,6 +193,11 @@
 }
 
 @media (max-width: variables.$bp-medium) {
+  .container {
+    flex-direction: column;
+    max-height: fit-content;
+  }
+
   /* Responsive styles for medium screens */
   .imageWrapperContainer {
     height: auto;
@@ -198,9 +210,6 @@
     width: 100%;
   }
 
-  .container {
-    flex-direction: column;
-  }
   .imagesContainer {
     flex-direction: column-reverse;
     gap: 10px;
@@ -237,6 +246,7 @@
 
 .sizeButtons {
   display: flex; /* Use flexbox for button alignment */
+  margin-top: 10px;
 }
 
 .sizeButton {

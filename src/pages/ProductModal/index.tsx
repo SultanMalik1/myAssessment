@@ -50,6 +50,7 @@ export default function ProductModal() {
             <div className={styles.imagesContainer}>
               {/* List of product images */}
               <div className={styles.imagesList}>
+                {/* Show the first 4 images */}
                 {productDetails.images.slice(0, 4).map((image, index) => (
                   <img
                     key={index}
